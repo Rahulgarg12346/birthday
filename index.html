@@ -16,10 +16,7 @@
 </head>
 
 <body>
-  <div id="countdownOverlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; font-family: 'Poppins', sans-serif;">
-    <h2 style="font-size: 2rem; color: black;">Countdown to Surprise!</h2>
-    <p id="timer" style="font-size: 1.5rem; color: black;"></p>
-  </div>
+  
     <audio class="song" loop autoplay>
         <source src="hbd.mpeg">
         </source>
@@ -165,26 +162,6 @@
   <script type="application/javascript" src="./script/main.js"></script>
 
   <!-- Countdown Script -->
-  <script>
-    const targetDate = new Date('2025-08-06T00:00:00').getTime();
-    const overlay = document.getElementById('countdownOverlay');
-    const timer = document.getElementById('timer');
-
-    const countdown = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        clearInterval(countdown);
-        overlay.style.display = 'none'; // Hide the overlay
-      } else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        timer.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
-      }
-    }, 1000);
-  </script>
+  
 
 </html>
